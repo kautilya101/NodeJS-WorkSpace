@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <body>
+
+    <input type="search" placeholder = "Search..." id = "sval">
+    <button onclick = "myfu()" > Search </button>
+
+    <div id= "contain"> 
+        
+    </div>
+
+
+    <script>
+
+    JSON.stringify(namesval).map((name) => {
+        var p = document.createElement('p');
+        p.innerText += name;
+        document.getElementById('contain').appendChild(p);
+    })
+
+        let searchInput = document.getElementById("sval");
+        
+        function myfu(){
+            document.getElementById("contain").innerHTML = ' ';
+           
+            let diffNames = JSON.stringify(namesval).filter((value) => {
+                return name.toLowerCase().includes(searchInput.value.toLowerCase())
+            })
+
+            diffNames.map((x) =>{
+                let p = document.createElement('p');
+                p.innerText = x
+                document.getElementById('contain').appendChild(p);
+            })
+        }
+    
+    </script>
+    </body> -->
+
+
+<body>
+
+    <center><div>
+    <a href = "/"> Back </a>
+    </div></center>
+    <input type="search" placeholder = "Search..." id = "sval">
+    <button onclick = "asce()" > Ascend </button>
+    <button onclick = "desc()" > Descend </button>
+
+    <div id= "contain"> </div>
+    <script>
+
+    JSON.stringify(namesval).map((name) => {
+        var p = document.createElement('p');
+        p.innerText += name;
+        document.getElementById('contain').appendChild(p);
+    })
+
+       
+        
+        function asce(){
+            document.getElementById("contain").innerHTML = ' ';
+           
+            let diffNames = () => { return JSON.stringify(namesval).sort();}
+               
+
+            diffNames.map((x) => {
+                let p = document.createElement('p');
+                p.innerText = x;
+                document.getElementById('contain').appendChild(p);
+            })
+
+        }
+
+        function desc(){
+            document.getElementById("contain").innerHTML = ' ';
+           
+            let diffNames = JSON.stringify(namesval).sort().reverse();
+               
+
+            diffNames.map((x) => {
+                let p = document.createElement('p');
+                p.innerText = x;
+                document.getElementById('contain').appendChild(p);
+            })
+        }
+        
+    </script>
+    </body> 
+</html>
